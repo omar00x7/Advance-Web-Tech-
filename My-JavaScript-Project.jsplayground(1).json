@@ -1,0 +1,39 @@
+{
+  "format": "javascript-playground-project",
+  "version": 3,
+  "exportedAt": "2026-09-30T13:56:23.706Z",
+  "project": {
+    "version": 3,
+    "activePath": "/js/main.js",
+    "files": [
+      {
+        "path": "/index.html",
+        "content": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>JavaScript Playground</title>\n    <link rel=\"stylesheet\" href=\"./css/style.css\" />\n  </head>\n  <body>\n    <main class=\"app\">\n      <h1>JavaScript Playground</h1>\n      <p id=\"message\">Open the Console to see the greeting.</p>\n    </main>\n    <script type=\"module\" src=\"./js/main.js\"></script>\n  </body>\n</html>\n",
+        "language": "html"
+      },
+      {
+        "path": "/css/style.css",
+        "content": "body {\n  margin: 0;\n  padding: 32px;\n  font-family: system-ui, sans-serif;\n  color: #0f172a;\n  background: #f8fafc;\n}\n\n.app {\n  max-width: 640px;\n  margin: 0 auto;\n}\n",
+        "language": "css"
+      },
+      {
+        "path": "/js/main.js",
+        "content": "const name = \"Omar\";\n\nconst marks = [];\nmarks.push(80);\nmarks.push(85);\nmarks.push(9);\nmarks.push(70);\n\nlet total = 0;\nfor (let i = 0; i < marks.length; i++) {\n  total = total + marks[i];\n}\n\nlet average = total / marks.length;\nconsole.log(\"total mark: \" + total);\nconsole.log(\"average mark: \" + average);\n\nlet result;\nif (average >= 40) {\n  result = \"pass\";\n} else {\n  result = \"fail\";\n}\nconsole.log(\"result: \" + result);\n\nlet grade;\nif (average >= 80) {\n  grade = \"A\";\n} else if (average >= 70) {\n  grade = \"B\";\n} else if (average >= 60) {\n  grade = \"C\";\n} else if (average >= 50) {\n  grade = \"D\";\n} else if (average >= 40) {\n  grade = \"E\";\n} else {\n  grade = \"F\";\n}\nconsole.log(\"Grade: \" + grade);\n\nfunction findHighestMarks(marks) {\n  let highest = 0;\n  for (let i = 0; i < marks.length; i++) {\n    if (marks[i] > highest) {\n      highest = marks[i];\n    }\n  }\n  return highest;\n}\n\nfunction countPassedSubject(marks) {\n  let count = 0;\n  for (let i = 0; i < marks.length; i++) {\n    if (marks[i] >= 50) {\n      count = count + 1;\n    }\n  }\n  return count;\n}\n\nconsole.log(\"Passed Subjects: \" + countPassedSubject(marks));\nconsole.log(\"Highest Mark: \" + findHighestMarks(marks));",
+        "language": "javascript"
+      },
+      {
+        "path": "/js/utils.js",
+        "content": "export function greet(name) {\n  return `Hello, !`;\n}\n",
+        "language": "javascript"
+      }
+    ],
+    "folders": [
+      {
+        "path": "/css"
+      },
+      {
+        "path": "/js"
+      }
+    ]
+  }
+}
